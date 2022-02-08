@@ -7,7 +7,6 @@
     "test": "echo \"Error: no test specified\" && exit 1",
     "start": "node index.js"
   },
-
   "repository": {
     "type": "git",
     "url": "git+https://github.com/Sanne1998HvA/ProjectTech.git"
@@ -19,8 +18,7 @@
   },
   "homepage": "https://github.com/Sanne1998HvA/ProjectTech#readme",
   "dependencies": {
-    "camelcase": "^6.3.0"
+    "camelcase": "^6.3.0",
+    "express": "^4.17.2"
   }
 }
-
-c
