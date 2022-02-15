@@ -1,2 +1,3 @@
 # ProjectTech
-Dit is mijn eerste message
+## Licence
+ MIT License
