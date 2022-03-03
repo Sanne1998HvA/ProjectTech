@@ -5,7 +5,7 @@
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "start": "node index.js"
+    "start": "nodemon index.js"
   },
   "repository": {
     "type": "git",
@@ -19,6 +19,11 @@
   "homepage": "https://github.com/Sanne1998HvA/ProjectTech#readme",
   "dependencies": {
     "camelcase": "^6.3.0",
-    "express": "^4.17.2"
+    "express": "^4.17.2",
+    "express-handlebars": "^6.0.2"
+  },
+  "devDependencies": {
+    "eslint": "^8.10.0",
+    "prettier": "2.5.1"
   }
 }
