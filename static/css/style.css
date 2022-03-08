@@ -10,3 +10,18 @@ header li {
     color:tomato;
     text-decoration: none;
 }
+
+.homeInlog {
+    display: flex;
+    justify-content: center;
+}
+
+.homeInlog > form{
+    background-color: saddlebrown;
+    padding-left: 10em;
+    padding-right: 10em;
+    padding-top: 5em;
+    padding-bottom: 5em;
+    border-radius: 2em;
+    
+    

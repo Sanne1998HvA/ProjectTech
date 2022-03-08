@@ -1,10 +1,13 @@
 const express = require('express')
 const {engine} = require('express-handlebars')
 const app = express()
+//const port = 1337
 const port = process.env.port || 1337
 
-//const connectDB = require('config/db')
-//connectDB();
+require('dotenv').config()
+
+const connectDB = require('./config/db')
+connectDB();
 
 
 app.engine('handlebars', engine());
