@@ -1,5 +1,12 @@
 * {
-    background-color: blue;
-    color: red;
+    background-color: #8DCFCB;
+    color: white;
 
+}
+
+
+header li {
+    font-size: 1.2em;
+    color:tomato;
+    text-decoration: none;
 }
