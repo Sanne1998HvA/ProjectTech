@@ -1,6 +1,8 @@
 const express = require('express')
 const {engine} = require('express-handlebars')
 const app = express()
+// voor de form
+const User = require('./models/User')
 //const port = 1337
 const port = process.env.port || 1337
 
@@ -29,12 +31,37 @@ app.get('/about', (req, res) => {
     });
   })
 
+  app.get('/signup', (req, res) => {
+    res.render('signup')
+    })
+
 app.listen(port, () => {
   console.log(`Example app listening on localhost:${port}`)
 })
 
 
 
+
+// Alles hieronder zorgt voor de validatie van de form
+app.post("/register", (req, res) =>{
+  //checkt of het ingevoerde email adres niet eerder is gebruikt voor het aanmaken van een account
+
+User.findOne({ email: req.body.email }).then((user) => {
+    if  (user) {
+      // Geef een 400 error als de ingevulde email al bestaat
+      return res.status(400).json({ email: "Een gebruiker heeft deze email al geregistreerd"})
+    } else {
+      // Als deze niet bestaat, maak nieuwe gebruiker aan
+      const newUser = new User({
+        userName: req.body.userName,
+        email: req.body.email,
+        password: req.body.password,
+      });
+        newUser.save()
+      return res.status(200).json ({msg: newUser})
+    }
+  });
+});
 
 
 

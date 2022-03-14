@@ -93,4 +93,8 @@ input {
     font-size: 1em;
   }
 
+  #meldAan {
+      color:tomato;
+      text-decoration: none;
+  }
     
