@@ -1,19 +1,17 @@
 <section class="homeInlog">
     
-    <form id="loginForm">
-                <label>Username</label><br>
-                <input type="email" placeholder="Email">
+    <form method="POST" action="/inloggen" id="loginForm">
+        <h3>Maak een account aan</h3>
+                <label>Gebruikersnaaam</label><br>
+                <input name="name" type="text" placeholder="Email">
 
-                <label>Username</label><br>
-                <input type="email" placeholder="Email">
+                <label>Email</label><br>
+                <input name="email" type="email" placeholder="Email">
 
-                <label>Password</label><br>
-                <input type="password" placeholder="Wachtwoord">
+                <label>Wachtwoord</label><br>
+                <input name="password" type="password" placeholder="Wachtwoord">
 
                 <button type="submit">Sign up</button>
             
-                <label>
-                <input type="checkbox" checked="checked"> Remember me
-                </label>
     </form>      
 </section>
