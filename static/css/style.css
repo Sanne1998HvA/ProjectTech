@@ -45,6 +45,7 @@ button {
 }
 .signinButton {
     padding: 1em;
+    color: #F4FFFE;
 }
 
 .signinButton :hover {
@@ -73,7 +74,7 @@ header .logo img {
 .homeInlog {
     display: flex;
     justify-content: center;
-    padding-top: 4em;
+    padding-top: 2em;
 }
 
 .homeInlog > form{

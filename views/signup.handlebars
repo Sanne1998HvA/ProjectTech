@@ -3,15 +3,15 @@
     <form method="POST" action="/inloggen" id="loginForm">
         <h3>Maak een account aan</h3>
                 <label>Gebruikersnaaam</label><br>
-                <input name="name" type="text" placeholder="Email">
+                <input name="userName" type="text" placeholder="Gebruikersnaam" required="required">
 
                 <label>Email</label><br>
-                <input name="email" type="email" placeholder="Email">
+                <input name="email" type="email" placeholder="Email" required="required">
 
                 <label>Wachtwoord</label><br>
-                <input name="password" type="password" placeholder="Wachtwoord">
+                <input name="password" type="password" placeholder="Wachtwoord" required="required">
 
-                <button type="submit">Sign up</button>
+                <button class="signinButton" type="submit">Sign up</button>
             
     </form>      
 </section>

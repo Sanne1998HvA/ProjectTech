@@ -4,12 +4,12 @@
     
     <form method="POST" action="/inloggen" id="loginForm">
                 <label>Username</label>
-                <input type="email" placeholder="Email">
+                <input name="email" type="email" placeholder="Email" required="required">
 
                 <label>Password</label>
-                <input type="password" placeholder="Wachtwoord">
+                <input name="password" type="password" placeholder="Wachtwoord" required="required">
 
-                <button type="submit">Login</button>
+                <button class="signinButton" type="submit">Login</button>
             
     </form>      
 </section>
