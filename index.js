@@ -2,6 +2,7 @@ const express = require('express')
 const {engine} = require('express-handlebars')
 const bodyParser = require('body-parser')
 const app = express()
+const router = express.Router()
 // voor de form
 const User = require('./models/User')
 //const port = 1337
@@ -96,7 +97,7 @@ app.post("/signup", (req, res) => {
   console.log(req.body);
 
     User.findOne({ email: req.body.emailAdres }).then((user) => {
-        if  (user) {
+        if  (user){
           // Geef een 400 error als de ingevulde email al bestaat
           return res.status(400).json({ emailAdres: "Een gebruiker heeft deze email al geregistreerd"})
         } else {
@@ -112,19 +113,18 @@ app.post("/signup", (req, res) => {
       });
     });
 
-    router.post ('/about' , async (req, res) => { 
+    router.post ('/registreren', async (req, res) => { 
       console.log('De gegevens zijn succesvol opgehaald') 
-    
       const newUser = new User ({ 
       userName: req.body.userName, 
       emailAdres: req.body.emailAdres, 
       password: wachtwoord 
     }); 
-
-      newUser.save((error) => { 
+ 
+          newUser.save((error) => { 
         if (error) { 
           console.log(error); 
-          return res.status(500).redirect('/about'); 
+          return res.status(500).redirect('/registreren'); 
         } 
       return res.status(200).redirect('/');
      });
