@@ -93,7 +93,7 @@ app.post ("/inloggen", (req, res) => {
   
 //checkt of het ingevoerde email adres niet eerder is gebruikt voor het aanmaken van een account
 app.post("/signup", (req, res) => {
-
+  
   console.log(req.body);
 
     User.findOne({ email: req.body.emailAdres }).then((user) => {
@@ -131,7 +131,6 @@ app.post("/signup", (req, res) => {
      });
 
 
-
     
 // app.post('/post-feedback', function (req, res) {
 //     dbConn.then(function(db) {
@@ -153,6 +152,44 @@ app.listen(port, () => {
 
 
 
+
+
+
+
+
+// app.post ("/signup", (req, res) => {
+
+// })
+
+
+
+// FOUT FOUT FOUT 
+// app.post('/home', async ( req, res) => {
+//   const gebruikersnaam = req.body.gebruikersnaaam
+//   const wachtwoord = req.body.wachtwoord
+//   try {
+//     const verborgenWachtwoord = await bcrypt.hash(password, 10)
+  
+//   const result = await User.create({
+//     gebruikersnaaam: userName,
+//     email: email,
+//     wachtwwoord: verborgenWachtwoord 
+//   })
+//     res.redirect('/about')
+//   } catch {
+//     console.log('Niet gelukt om in te loggen, probeer het nog eens.')
+//     res.redirect('home')
+//   }
+// })
+
+// app.get('/about', (req, res) => {
+//   res.render('about', {
+//       person: {
+//       gebruikersnaam: user,
+//     }
+//     })
+//   })
+// FOUT FOUT FOUT 
 
 
 
