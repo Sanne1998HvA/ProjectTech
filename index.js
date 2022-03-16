@@ -51,49 +51,28 @@ app.post ("/inloggen", (req, res) => {
   console.log (req.body)
 })
 
-// app.post ("/signup", (req, res) => {
-
-// })
-
-
-
-// FOUT FOUT FOUT 
-// app.post('/home', async ( req, res) => {
-//   const gebruikersnaam = req.body.gebruikersnaaam
-//   const wachtwoord = req.body.wachtwoord
-//   try {
-//     const verborgenWachtwoord = await bcrypt.hash(password, 10)
-  
-//   const result = await User.create({
-//     gebruikersnaaam: userName,
-//     email: email,
-//     wachtwwoord: verborgenWachtwoord 
+// app.post('inloggen', async (req, res) => {
+//   const userName = req.body.userName
+//   const passWord = req.body.passWord
+//   const result = await user.create({
+//     userName = userName,
+//     passWord = passWord
 //   })
-//     res.redirect('/about')
-//   } catch {
-//     console.log('Niet gelukt om in te loggen, probeer het nog eens.')
-//     res.redirect('home')
+
+//   res.redirect('/succes')
+// } catch {
+//   console.log('Niet gelukt om in te loggen')
+//     res.redirect('/inloggen')
 //   }
 // })
 
-// app.get('/about', (req, res) => {
-//   res.render('about', {
-//       person: {
-//       gebruikersnaam: user,
-//     }
-//     })
-//   })
-// FOUT FOUT FOUT 
 
 
-
-
-
-// Alles hieronder zorgt voor de validatie van de form
+// Alles hieronder zorgt voor de validatie van de form signup
   
 //checkt of het ingevoerde email adres niet eerder is gebruikt voor het aanmaken van een account
 app.post("/signup", (req, res) => {
-  
+
   console.log(req.body);
 
     User.findOne({ email: req.body.emailAdres }).then((user) => {
@@ -131,7 +110,13 @@ app.post("/signup", (req, res) => {
      });
 
 
-    
+// //PROBEERSEL
+// app.post("/login", (req, res) => {
+//   const successRedirect: "/about",
+//   const failureRedirect: "/inloggen"
+// });
+
+
 // app.post('/post-feedback', function (req, res) {
 //     dbConn.then(function(db) {
 //         delete req.body._id; // for safety reasons
