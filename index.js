@@ -46,35 +46,38 @@ app.get('/signup', (req, res) => {
   res.render('signup')
       })
 
+app.post('/inloggen', async (req, res) => {
+  try {
+    const deGebruiker = await User.findOne({'email': req.body.email}).lean()
+    const wachtwoord = req.body.wachtwoord
 
-app.post ("/inloggen", (req, res) => {
-  console.log (req.body)
+    if(deGebruiker){
+      console.log(deGebruiker.password, wachtwoord)
+      if (deGebruiker.password === wachtwoord) {
+        // return deGebruiker
+        res.redirect('/about')
+        console.log('succesvol ingelogd')
+      } else {
+        //return 'invalid password'
+        console.log('fout')
+      }
+    } else {
+      // return 'user was not found'
+      console.log('gebruiker niet gevonden')
+    }
+
+  } catch (error) {
+    throw new Error(error)
+  }
 })
 
-// app.post('inloggen', async (req, res) => {
-//   const userName = req.body.userName
-//   const passWord = req.body.passWord
-//   const result = await user.create({
-//     userName = userName,
-//     passWord = passWord
-//   })
-
-//   res.redirect('/succes')
-// } catch {
-//   console.log('Niet gelukt om in te loggen')
-//     res.redirect('/inloggen')
-//   }
-// })
-
-
-
-// Alles hieronder zorgt voor de validatie van de form signup
+// Alles hieronder zorgt voor de sign up form en de validatie
   
-//checkt of het ingevoerde email adres niet eerder is gebruikt voor het aanmaken van een account
+//laat sign up pagina zien
 app.post("/signup", (req, res) => {
-
   console.log(req.body);
 
+//checkt of het ingevoerde email adres niet eerder is gebruikt voor het aanmaken van een account
     User.findOne({ email: req.body.emailAdres }).then((user) => {
         if  (user){
           // Geef een 400 error als de ingevulde email al bestaat
@@ -110,6 +113,43 @@ app.post("/signup", (req, res) => {
      });
 
 
+     app.listen(port, () => {
+      console.log(`Example app listening on localhost:${port}`)
+    })
+    
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+// async function getUser(emailAdres, passWord) {
+//   try {
+//     const user = await User.find({"email" emailAdres}).lean()
+
+//     if (user) {
+//       if (passWord =- user.passWord) {
+//         return user
+//       } else {
+//         return 'invalid password'
+//       }
+//     } else {
+//       return 'user was not found'
+//     }
+//     return;
+//   } catch (error) {
+//     throw new Error(error)
+//   }
+// }
+     
 // //PROBEERSEL
 // app.post("/login", (req, res) => {
 //   const successRedirect: "/about",
@@ -125,22 +165,6 @@ app.post("/signup", (req, res) => {
 
 //       res.send('Data received:\n' + JSON.stringify(req.body));
 //   });
-      
-
-app.listen(port, () => {
-  console.log(`Example app listening on localhost:${port}`)
-})
-
-
-
-
-
-
-
-
-
-
-
 
 // app.post ("/signup", (req, res) => {
 
@@ -175,8 +199,6 @@ app.listen(port, () => {
 //     })
 //   })
 // FOUT FOUT FOUT 
-
-
 
 // Alles hieronder zorgt ervoor dat de tekst tussen de haakjes naar de pagina worden gestuurd. Week 2 
   
