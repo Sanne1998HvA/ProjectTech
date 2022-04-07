@@ -6,7 +6,7 @@ const router = express.Router()
 // voor de form
 const User = require('./models/User')
 //const port = 1337
-const port = process.env.port || 1337
+const port = process.env.port || 1884
 
 require('dotenv').config()
 
@@ -117,105 +117,3 @@ app.post("/signup", (req, res) => {
       console.log(`Example app listening on localhost:${port}`)
     })
     
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-// async function getUser(emailAdres, passWord) {
-//   try {
-//     const user = await User.find({"email" emailAdres}).lean()
-
-//     if (user) {
-//       if (passWord =- user.passWord) {
-//         return user
-//       } else {
-//         return 'invalid password'
-//       }
-//     } else {
-//       return 'user was not found'
-//     }
-//     return;
-//   } catch (error) {
-//     throw new Error(error)
-//   }
-// }
-     
-// //PROBEERSEL
-// app.post("/login", (req, res) => {
-//   const successRedirect: "/about",
-//   const failureRedirect: "/inloggen"
-// });
-
-
-// app.post('/post-feedback', function (req, res) {
-//     dbConn.then(function(db) {
-//         delete req.body._id; // for safety reasons
-//         db.collection('feedbacks').insertOne(req.body);
-//       });
-
-//       res.send('Data received:\n' + JSON.stringify(req.body));
-//   });
-
-// app.post ("/signup", (req, res) => {
-
-// })
-
-
-
-// FOUT FOUT FOUT 
-// app.post('/home', async ( req, res) => {
-//   const gebruikersnaam = req.body.gebruikersnaaam
-//   const wachtwoord = req.body.wachtwoord
-//   try {
-//     const verborgenWachtwoord = await bcrypt.hash(password, 10)
-  
-//   const result = await User.create({
-//     gebruikersnaaam: userName,
-//     email: email,
-//     wachtwwoord: verborgenWachtwoord 
-//   })
-//     res.redirect('/about')
-//   } catch {
-//     console.log('Niet gelukt om in te loggen, probeer het nog eens.')
-//     res.redirect('home')
-//   }
-// })
-
-// app.get('/about', (req, res) => {
-//   res.render('about', {
-//       person: {
-//       gebruikersnaam: user,
-//     }
-//     })
-//   })
-// FOUT FOUT FOUT 
-
-// Alles hieronder zorgt ervoor dat de tekst tussen de haakjes naar de pagina worden gestuurd. Week 2 
-  
-/* const port = process.env.port || 1337 */
-
-// app.get('/', (req, res) => {
-//  res.send('Hallo Sanne!')
-// })
-
-// app.get('/about', (req, res) => {
-//   res.send('Ik ben Sanne en ik ben 23 jaar oud')
-// })
-
-// app.get('/contact', (req, res) => {
-//   res.send('Je kan mij bereiken op... SIKE ga mijn telefoonnummer niet geven.')
-// })
-
-// app.get('*', (req, res) => {
-//   res.send('404 Page not found')
-// })

@@ -60,7 +60,6 @@ header .logo {
 }
 
 header .logo img {
-    align-content: ;
     max-width: 15em;
     margin-top: 2.5em;
 }
@@ -99,3 +98,10 @@ input {
       text-decoration: none;
   }
     
+.profiel {
+    display: flex;
+    justify-content: center;
+    justify-content: center;
+    background-color:#022756;
+    border-radius: 2em;
+}
