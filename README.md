@@ -82,5 +82,5 @@ Ga nar je browwser en zoek de site op. 😬<br>
 Auteur: Sanne Kes, license by MIT.
 
 ## Gebruikte bronnen
-[Dev.to - Frontend form validatie](https://dev.to/javascriptacademy/form-validation-using-javascript-34je)
+[Dev.to - Frontend form validatie](https://dev.to/javascriptacademy/form-validation-using-javascript-34je)<br>
 [Alle stappen van connecten met de db tot registreren inloggen ](https://www.youtube.com/watch?v=zQhzt2-MMl8)
