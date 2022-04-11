@@ -83,4 +83,17 @@ Auteur: Sanne Kes, license by MIT.
 
 ## Gebruikte bronnen
 [Dev.to - Frontend form validatie](https://dev.to/javascriptacademy/form-validation-using-javascript-34je)<br>
-[Alle stappen van connecten met de db tot registreren inloggen ](https://www.youtube.com/watch?v=zQhzt2-MMl8)
+[Alle stappen van connecten met de db tot registreren inloggen ](https://www.youtube.com/watch?v=zQhzt2-MMl8)<br>
+[Event preventDefault()](https://developer.mozilla.org/en-US/docs/Web/API/Event/preventDefault)
+[Regex](https://regexr.com)
+[Hashing](https://stackoverflow.com/questions/14588032/mongoose-password-hashing)
+[Bcrypt](https://github.com/kelektiv/node.bcrypt.js/)
+[Heroku](https://devcenter.heroku.com/articles/getting-started-with-nodejs)
+[Express](https://www.npmjs.com/package/express)
+[Mongoose](https://www.npmjs.com/package/mongoose)
+[Express Handlebars](https://www.npmjs.com/package/express-handlebars)
+[ESLint](https://www.npmjs.com/package/eslint)
+[Handlebars](https://handlebarsjs.com/guide/#block-helpers)
+[Handlebars install](https://www.npmjs.com/package/express-handlebars)
+
+
