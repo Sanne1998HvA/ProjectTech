@@ -6,7 +6,7 @@ const router = express.Router()
 // voor de form
 const User = require('./models/User')
 //const port = 1337
-const port = process.env.port || 1884
+const port = process.env.port || 1234
 
 require('dotenv').config()
 

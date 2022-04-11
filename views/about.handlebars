@@ -1,17 +1,59 @@
 
 
-<section class="profiel">
+<section class="profielNaam">
 
-<h1>Mijn profiel</h1>
+<h3 class="profielNaam">Hi {{person.firstname}} {{person.lastname}}</h3>
+</section>
 
-<p>Hi {{person.firstname}} {{person.lastname}}</p>
+<section class="overSportpartner">
+    <h2 id="titelOverSportpartner">Over SportPartner</h2>
 </section>
-<section>
-    <nav>
-            <ul>
-                <li><a href="about">About</a>
-                <li><a href="inloggen">Inloggen</a>
-                <button class="signinButton"><a href="signup">Sign up</a></button>
-            </ul>
-    </nav>
+<section class="overSportpartner">
+    <p id="aboutText">Al meer dan 10 jaar helpt Sportpartner om sociaal en actief zijn. 
+    Om mensen te leren kennen en vrienden te maken. Om gezonder en 
+    leuker te leven. Meld je aan en kijk wie er bij jouw uit de buurt lid zijn.
+    Sportpartner werkt zo goed omdat alle profielen handmatig gekeurd worden. 
+    De betrouwbaarheid van de leden is dus heel hoog. Ons team van medewerkers 
+    houdt dagelijks de website goed in de gaten. </p>
+    </section>
+
+<section class="overSportpartner">
+    <h2 id="titelOverSportpartner">Privacy</h2>
 </section>
+<section class="overSportpartner">
+    <p id="aboutText">Jouw privacy staat bij ons voorop. Je hoeft niks in te vullen 
+        wat niet nodig is. Jouw gegevens worden zeker niet doorverkocht en de hele 
+        website is streng beveiligd met een zogeheten SSL certificaat.</p>
+    </section>
+
+
+<article>
+  <h2 id="titelKleur">Heb jij een vraag of opmerking over SportPartner?</h2>
+  <h3 class="text">Stuur je vraag of opmerking in een email naar SportPartner</h3>
+  <form id="emailQuestionForm" name="validateForm">
+    {{! <form id="emailQuestionForm" name="validateForm" method="post" action="/"> }}
+
+    <fieldset class="question_email">
+      <label for="email">Emailadres</label>
+      <input name="email" placeholder="Emailadres" type="text" id="text" />
+      <section class="errorMessage"></section>
+    </fieldset>
+
+    <fieldset class="question_message">
+      <label for="message">Jouw vraag</label>
+      <input
+        id="message"
+        name="message"
+        placeholder="Stel hier jouw vraag"
+        type="text"
+      />
+      <section class="errorMessage"></section>
+    </fieldset>
+
+    <p class="successMessage"></p>
+    <button href="/" class="signinButton" type="submit">Verstuur bericht</button>
+
+  </form>
+
+</article>
+<script src="script/berichtValidator.js"></script>

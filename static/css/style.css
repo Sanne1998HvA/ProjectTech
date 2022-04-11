@@ -100,8 +100,139 @@ input {
     
 .profiel {
     display: flex;
-    justify-content: center;
+    justify-content:flex-end;
     justify-content: center;
     background-color:#022756;
     border-radius: 2em;
+}
+
+
+
+/* ////////////////////////////// */
+/* Nieuwe css herkansing Sanne */
+
+article {
+    text-align: center;
+    background-color: var(--light-text);
+    border-radius: 2em;
+    padding: 1em;
+    margin: 1em 20em;
+ }
+
+.resultKnop {
+    display: flex;
+    justify-content: center;
+ }
+ 
+ .titleSchool {
+    color: var(--dark-color-a);
+ }
+ 
+ .linkText {
+    text-decoration: none;
+    color: var(--dark-color-a);
+    
+ }
+ 
+ .schoolCursus {
+    background-color: var(--accent-color);
+    border: none;
+    border-radius: 1em;
+    padding: 1em;
+    color: #F4FFFE;
+    align-content: center;
+ }
+ 
+ .schoolCursus :hover {
+    color:var(--dark-color-a);
+    border-color:var(--dark-color-a);
+ }
+ 
+ .text {
+    color: var(--dark-color-a);
+ }
+ 
+ #emailQuestionForm input{
+    border: 10px solid #f0f0f0;
+    border-radius: 2em;
+ }
+ 
+ #emailQuestionForm input:focus{
+    outline: 0;
+ }
+ 
+ #emailQuestionForm .success input {
+    border-color: #09c372;
+ }
+ 
+ #emailQuestionForm .error input {
+    border-color: #ff3860;
+ }
+ 
+ #emailQuestionForm .errorMessage {
+    font-size: 1rem;
+    color: red;
+    border-color: #ff3860;
+    font-size: 2em;
+    /* height: 4em; */
+ }
+ 
+ .successMessage {
+    display: none;
+ }
+ 
+ .successMessage.visible{
+    display: block;
+    color: black;
+    font-size: 1.2rem;
+ }
+ 
+ .hidden {
+    display: none;
+ }
+ 
+ .visible {
+    display: block;
+ }
+ 
+ .signinButton.hidden {
+    display: none;
+ }
+
+ #titelKleur {
+     color: tomato; 
+ }
+
+fieldset {
+    border: none;
+}
+
+.profielNaam {
+    display: flex;
+    justify-content: flex-start;
+    background-color: #022756;
+    margin-left: 3em;
+    margin-right: 3em;
+    border-radius: 1em;
+
+}
+
+.overSportpartner {
+    display: flex;
+    justify-content: flex-start;
+    background-color: #f0f0f0;
+    margin-left: 3em;
+    margin-right: 3em;
+    border-radius: 1em;
+    margin-top: 3em;
+    padding: 2em;
+
+}
+
+#titelOverSportpartner{
+    color: tomato; ;
+}
+
+#aboutText {
+    color: #022756;
 }
